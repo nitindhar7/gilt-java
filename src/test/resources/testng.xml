@@ -11,6 +11,7 @@
         </groups> 
         <packages>             
             <package name="com.giltjava"/>
+            <package name="com.giltjava.util"/>
         </packages> 
    </test> 
  </suite>

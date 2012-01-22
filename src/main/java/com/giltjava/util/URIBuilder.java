@@ -54,9 +54,9 @@ public class URIBuilder {
         if(action != null)
             sb.append(action).append(".json").append("?");
         if(apikey != null)
-            sb.append("apikey=").append(apikey).append("&");
+            sb.append("apikey=").append(apikey);
         if(params != null)
-            sb.append(params);
+            sb.append("&").append(params);
         return sb.toString();
     }
     

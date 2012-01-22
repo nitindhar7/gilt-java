@@ -29,5 +29,9 @@ public class GiltAPI {
 
         return HttpUtil.get(uri);
     }
+    
+    public String getAPIKey() {
+        return apiKey;
+    }
 
 }

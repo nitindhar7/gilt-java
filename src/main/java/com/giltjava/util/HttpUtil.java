@@ -5,36 +5,43 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 
 import javax.net.ssl.HttpsURLConnection;
 
 public class HttpUtil {
     
-    public static String get(String url) {
-        String response = null;
-        HttpsURLConnection conn = null;
+    private static final String ENCODING = "UTF-8";
+    
+    public static String get(String endpointUrl) {
+        StringBuilder sb = null;
+        URLConnection urlConn = null;
 
         try {
-            conn = (HttpsURLConnection) (new URL(url)).openConnection();
-            conn.connect();
-            
-            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            StringBuilder sb = new StringBuilder();
+            sb = new StringBuilder();
+            URL url = new URL(endpointUrl);
 
-            for (String line = in.readLine(); line != null; line = in.readLine()) {
+            if (url.getProtocol().toLowerCase().equals("https")) {
+                urlConn = (HttpsURLConnection) url.openConnection();
+            } else {
+                urlConn = url.openConnection();
+            }
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(urlConn.getInputStream(), ENCODING));
+
+            String line;
+            while ((line = in.readLine()) != null) {
                 sb.append(line);
             }
-            
-            response = sb.toString();
+
+            in.close();
         } catch (MalformedURLException e) {
             throw new RuntimeException("Error connecting to url", e);
         } catch (IOException e) {
             throw new RuntimeException("Error reading from url", e);
-        } finally {
-            conn.disconnect();
         }
         
-        return response;
+        return sb.toString();
     }
 
 }

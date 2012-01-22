@@ -9,14 +9,14 @@ Android platform to be tested soon!
 
 Build & Use
 -----------
-Please check [Gilt API documentation](http://api.gilt.com) for the official API definitions and descriptions.
+Please check [Gilt API documentation](http://api.gilt.com) for the official API descriptions and to get your private API key (required for use).
 To build:
 
     $ ant
 
 Examples:
 
-    GiltAPI gilt = new GiltAPI();
+    GiltAPI gilt = new GiltAPI(API_KEY);
 
     // Get active sales for all Gilt stores
     gilt.getSales(null, Sale.ACTIVE, null);
@@ -41,7 +41,7 @@ Gilt API Endpoints
 --------------------
 Currently there is 1 API endpoint available with the base url being `https://api.gilt.com/v1/`.
 
-- ** sales **
+- sales
   - Retrieve Gilt sales
   - `https://api.gilt.com/v1/sales`
   - `String getSales(String store, String action, Map<String,String> params)`
