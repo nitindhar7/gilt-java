@@ -9,7 +9,7 @@ Android platform to be tested soon!
 
 Build & Use
 -----------
-Please check [Gilt API documentation](http://api.gilt.com) for the official API descriptions and to get your private API key (required for use).
+Please check [Gilt API documentation](https://api.gilt.com) for the official API descriptions and to get your private API key (required for use).
 To build:
 
     $ ant
