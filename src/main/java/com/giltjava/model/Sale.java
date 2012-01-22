@@ -2,6 +2,9 @@ package com.giltjava.model;
 
 public class Sale {
     
+    public static final String ACTIVE = "active";
+    public static final String UPCOMING = "upcoming";
+    
     private String name;
     private String sale_url;
     private String[] image_urls;
