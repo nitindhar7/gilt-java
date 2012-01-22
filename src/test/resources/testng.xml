@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
+
+<suite name="gilt-java" verbose="5"> 
+  <test name="gilt-java tests">
+          <groups>
+            <run>
+                <include name="ready"/>
+                <exclude name="skip"/>
+                <exclude name="toBeFixed"/>
+            </run>
+        </groups> 
+        <packages>             
+            <package name="com.giltjava"/>
+        </packages> 
+   </test> 
+ </suite>

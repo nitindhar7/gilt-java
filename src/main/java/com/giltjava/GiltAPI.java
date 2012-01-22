@@ -1,10 +1,10 @@
 package com.giltjava;
 
-import java.util.List;
 import java.util.Map;
 
 import com.giltjava.model.Resource;
 import com.giltjava.model.Sale;
+import com.giltjava.util.HttpUtil;
 import com.giltjava.util.URIBuilder;
 
 public class GiltAPI {
@@ -15,23 +15,19 @@ public class GiltAPI {
         this.apiKey = apiKey;
     }
     
-    public List<Sale> getSales(String action, Map<String,String> params) {
-        return null;
-    }
-
-    public List<Sale> getSales(String store, String action, Map<String,String> params) {
+    public String getSales(String store, String action, Map<String,String> params) {
         if(action == null || action.length() == 0)
             action = Sale.ACTIVE;
         
-        URIBuilder builder = new URIBuilder();
-        builder.resource(Resource.SALES);
-        builder.store(store);
-        builder.action(action);
-        builder.apikey(apiKey);
-        builder.params(URIBuilder.parametrizeMap(params));
-        builder.build();
-        
-        return null;
+        String uri = new URIBuilder()
+                        .resource(Resource.SALES)
+                        .store(store)
+                        .action(action)
+                        .apikey(apiKey)
+                        .params(URIBuilder.parametrizeMap(params))
+                        .build();
+
+        return HttpUtil.get(uri);
     }
 
 }
