@@ -2,7 +2,7 @@ package com.giltjava;
 
 import java.util.List;
 
-import com.giltjava.resource.Sale;
+import com.giltjava.model.Sale;
 
 public class GiltAPI {
     

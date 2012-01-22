@@ -1,4 +1,4 @@
-package com.giltjava.resource;
+package com.giltjava.model;
 
 public class Sale {
     

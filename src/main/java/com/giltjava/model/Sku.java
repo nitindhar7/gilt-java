@@ -1,4 +1,4 @@
-package com.giltjava.resource;
+package com.giltjava.model;
 
 import java.util.Map;
 
