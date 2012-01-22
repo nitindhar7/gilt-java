@@ -16,20 +16,22 @@ To build:
 
 Examples:
 
-    GiltAPI gilt = new GiltAPI(API_KEY);
+``` java
+GiltAPI gilt = new GiltAPI(API_KEY);
 
-    // Get active sales for all Gilt stores
-    gilt.getSales(null, Sale.ACTIVE, null);
-    
-    // Get active sales for the Kids store
-    gilt.getSales(Store.KIDS, Sale.ACTIVE, null);
+// Get active sales for all Gilt stores
+gilt.getSales(null, Sale.ACTIVE, null);
 
-    // Building a map option parameters
-    Map<String,String> options = new HashMap<String,String>();
-    options.put("product_detail", "true");
-    
-    // Get active sales for the Kids store with full product details (requires options)
-    gilt.getSales(Store.KIDS, Sale.ACTIVE, options);
+// Get active sales for the Kids store
+gilt.getSales(Store.KIDS, Sale.ACTIVE, null);
+
+// Building a map option parameters
+Map<String,String> options = new HashMap<String,String>();
+options.put("product_detail", "true");
+
+// Get active sales for the Kids store with full product details (requires options)
+gilt.getSales(Store.KIDS, Sale.ACTIVE, options);
+```
 
 Currently each API endpoint returns a String object representing the json response. gilt-java also includes software from [json.org/java](http://json.org/java/).
 
