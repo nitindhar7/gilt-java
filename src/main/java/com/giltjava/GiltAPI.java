@@ -26,7 +26,7 @@ public class GiltAPI {
                         .apikey(apiKey)
                         .params(URIBuilder.parametrizeMap(params))
                         .build();
-
+        
         return HttpUtil.get(uri);
     }
     

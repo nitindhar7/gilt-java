@@ -33,7 +33,7 @@ options.put("product_detail", "true");
 gilt.getSales(Store.KIDS, Sale.ACTIVE, options);
 ```
 
-Currently each API endpoint returns a String object representing the json response. gilt-java also includes software from [json.org/java](http://json.org/java/).
+Currently each API endpoint returns a String object representing the json response. gilt-java also includes software from [codehaus.org](http://jackson.codehaus.org/).
 
 Contribute
 ------------

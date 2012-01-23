@@ -1,17 +1,19 @@
 package com.giltjava.model;
 
+import java.util.List;
+
 public class Sale {
     
     public static final String ACTIVE = "active";
     public static final String UPCOMING = "upcoming";
     
     private String name;
-    private String sale_url;
-    private String[] image_urls;
+    private String saleUrl;
+    private List<String> imageUrls;
     private String begins;
     private String ends;
     private String description;
-    private Product[] products;
+    private List<Product> products;
 
     public String getName() {
         return name;
@@ -21,20 +23,20 @@ public class Sale {
         this.name = name;
     }
     
-    public String getSale_url() {
-        return sale_url;
+    public String getSaleUrl() {
+        return saleUrl;
     }
     
-    public void setSale_url(String sale_url) {
-        this.sale_url = sale_url;
+    public void setSaleUrl(String saleUrl) {
+        this.saleUrl = saleUrl;
     }
     
-    public String[] getImage_urls() {
-        return image_urls;
+    public List<String> getImageUrls() {
+        return imageUrls;
     }
     
-    public void setImage_urls(String[] image_urls) {
-        this.image_urls = image_urls;
+    public void setImageUrls(List<String> imageUrls) {
+        this.imageUrls = imageUrls;
     }
     
     public String getBegins() {
@@ -61,11 +63,11 @@ public class Sale {
         this.description = description;
     }
     
-    public Product[] getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
     
-    public void setProducts(Product[] products) {
+    public void setProducts(List<Product> products) {
         this.products = products;
     }
 

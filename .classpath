@@ -3,8 +3,9 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/java-json.jar"/>
 	<classpathentry kind="lib" path="lib/junit-4.9.jar"/>
 	<classpathentry kind="lib" path="lib/testng-5.9.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-asl-1.9.4.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-mapper-asl-1.9.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,13 +1,15 @@
 package com.giltjava.model;
 
+import java.util.List;
+
 public class Product {
     
     private String name;
     private String brand;
-    private ProductContent[] content;
-    private Sku[] skus;
+    private List<ProductContent> content;
+    private List<Sku> skus;
     private String url;
-    private String[] imageUrls;
+    private List<String> imageUrls;
     
     public String getName() {
         return name;
@@ -25,19 +27,19 @@ public class Product {
         this.brand = brand;
     }
     
-    public ProductContent[] getContent() {
+    public List<ProductContent> getContent() {
         return content;
     }
     
-    public void setContent(ProductContent[] content) {
+    public void setContent(List<ProductContent> content) {
         this.content = content;
     }
     
-    public Sku[] getSkus() {
+    public List<Sku> getSkus() {
         return skus;
     }
     
-    public void setSkus(Sku[] skus) {
+    public void setSkus(List<Sku> skus) {
         this.skus = skus;
     }
     
@@ -49,11 +51,11 @@ public class Product {
         this.url = url;
     }
     
-    public String[] getImageUrls() {
+    public List<String> getImageUrls() {
         return imageUrls;
     }
     
-    public void setImageUrls(String[] imageUrls) {
+    public void setImageUrls(List<String> imageUrls) {
         this.imageUrls = imageUrls;
     }
 
