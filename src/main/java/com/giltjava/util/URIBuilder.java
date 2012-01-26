@@ -66,10 +66,7 @@ public class URIBuilder {
         
         StringBuilder sb = new StringBuilder();
         for(String key : params.keySet()) {
-            if(params.get(key).equals("product_details"))
-                sb.append(key).append("=").append(params.get(key)).append("&");
-            else
-                return "";
+            sb.append(key).append("=").append(params.get(key)).append("&");
         }
         return sb.substring(0, sb.toString().length()-1);
     }
