@@ -61,9 +61,15 @@ public class URIBuilder {
     }
     
     public static String parametrizeMap(Map<String,String> params) {
+        if(params == null)
+            return "";
+        
         StringBuilder sb = new StringBuilder();
         for(String key : params.keySet()) {
-            sb.append(key).append("=").append(params.get(key)).append("&");
+            if(params.get(key).equals("product_details"))
+                sb.append(key).append("=").append(params.get(key)).append("&");
+            else
+                return "";
         }
         return sb.substring(0, sb.toString().length()-1);
     }

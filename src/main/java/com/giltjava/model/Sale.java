@@ -2,6 +2,7 @@ package com.giltjava.model;
 
 import java.util.List;
 
+
 public class Sale {
     
     public static final String ACTIVE = "active";
