@@ -1,6 +1,6 @@
 Gilt-Java
 =========
-A simple Java client library for the Gilt API(v1). Currently this library is in development and will provide basic support for fetching current and upcoming
+A simple (unofficial) Java client library for the Gilt API(v1). Currently this library is in development and will provide basic support for fetching current and upcoming
 sales. gilt-java has minimal dependencies and is aimed to be easy to use.
 
 Android
