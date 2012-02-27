@@ -20,33 +20,46 @@ Examples:
 GiltAPI gilt = new GiltAPI(API_KEY);
 
 // Get active sales for all Gilt stores
-gilt.getSales(null, Sale.ACTIVE, null);
+gilt.getActiveSales();
 
 // Get active sales for the Kids store
-gilt.getSales(Store.KIDS, Sale.ACTIVE, null);
+gilt.getActiveSales(Store.KIDS);
 
-// Building a map option parameters
-Map<String,String> options = new HashMap<String,String>();
-options.put("product_detail", "true");
+// Get upcoming sales for all Gilt stores
+gilt.getUpcomingSales();
 
-// Get active sales for the Kids store with full product details (requires options)
-gilt.getSales(Store.KIDS, Sale.ACTIVE, options);
+// Get upcoming sales for the Womens store
+gilt.getUpcomingSales(Store.WOMEN);
+
+// Get sale details for specific sale
+gilt.getSaleDetails(sale.getStoreKey(), sale.getSaleKey());
+
+// Get product details for specific product id
+gilt.getProductDetails(productId)
 ```
 
-Currently each API endpoint returns a String object representing the json response. gilt-java also includes software from [codehaus.org](http://jackson.codehaus.org/).
+NOTE: gilt-java includes software from [codehaus.org](http://jackson.codehaus.org/) & [testng.org](http://testng.org/).
 
 Contribute
 ------------
-Submit well documented code with unit tests and I will merge your changes in as long as your code does not break the build
+Submit well documented code with unit tests and I will merge your changes in as long as your code does not break the build.
 
 Gilt API Endpoints
 --------------------
-Currently there is 1 API endpoint available with the base url being `https://api.gilt.com/v1/`.
+Currently there is 2 API endpoints available:
 
-- sales
-  - Retrieve Gilt sales
-  - `https://api.gilt.com/v1/sales`
-  - `String getSales(String store, String action, Map<String,String> params)`
+- Base Url
+  - https://api.gilt.com/v1/{endpoint}?apikey={apikey}
+
+- Sales Endpoint
+  - `sales/active.json => List<Sale> getActiveSales()`
+  - `sales/{store_key}/active.json => List<Sale> getActiveSales(String storeKey)`
+  - `sales/upcoming.json => List<Sale> getUpcomingSales()`
+  - `sales/{store_key}/upcoming.json => List<Sale> getUpcomingSales(String storeKey)`
+  - `sales/{store_key}/{sale_key}/detail.json => List<Sale> getSaleDetails(String storeKey, String saleKey)`
+
+- Products Endpoint
+  - `products/{product_id}/detail.json => Product getProductDetails(int productId)`
 
 Copyright
 ---------

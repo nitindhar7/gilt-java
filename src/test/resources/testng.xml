@@ -10,8 +10,8 @@
             </run>
         </groups> 
         <packages>             
-            <package name="com.giltjava"/>
-            <package name="com.giltjava.util"/>
+            <package name="com.nitindhar.giltjava"/>
+            <package name="com.nitindhar.giltjava.util"/>
         </packages> 
    </test> 
  </suite>
