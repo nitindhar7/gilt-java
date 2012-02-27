@@ -46,7 +46,7 @@ Submit well documented code with unit tests and I will merge your changes in as 
 
 Gilt API Endpoints
 --------------------
-Currently there is 2 API endpoints available:
+Currently there are 2 API endpoints available:
 
 - Base Url
   - https://api.gilt.com/v1/{endpoint}?apikey={apikey}
