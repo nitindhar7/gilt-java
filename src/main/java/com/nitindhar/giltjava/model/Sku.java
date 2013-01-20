@@ -1,6 +1,5 @@
 package com.nitindhar.giltjava.model;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -10,29 +9,28 @@ import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 
+@SuppressWarnings("serial")
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class Sku implements Serializable {
-
-    private final static long serialVersionUID = -499773267116117172L;
+public class Sku extends AbstractData {
 
     @JsonProperty("id")
     @NotNull
     private final int id;
-    
+
     @JsonProperty("msrp_price")
     @NotNull
     private final double msrpPrice;
-    
+
     @JsonProperty("sale_price")
     @NotNull
     private final double salePrice;
-    
+
     @JsonProperty("shipping_surcharge")
     private final double shippingSurcharge;
-    
+
     @JsonProperty("attributes")
     private final List<Map<String,String>> attributes;
-    
+
     @JsonCreator
     public Sku(@JsonProperty("id") @NotNull int id,
                @JsonProperty("msrp_price") @NotNull double msrpPrice,
@@ -65,5 +63,5 @@ public class Sku implements Serializable {
     public List<Map<String, String>> getAttributes() {
         return attributes;
     }
-    
+
 }

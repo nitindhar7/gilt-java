@@ -1,11 +1,14 @@
 Gilt-Java
 =========
-A simple (unofficial) Java client library for the Gilt API(v1). Currently this library is in development and will provide basic support for fetching current and upcoming
-sales. gilt-java has minimal dependencies and is aimed to be easy to use.
+A simple (unofficial) Java client library for the Gilt API(v1). Currently this provides basic support for fetching current and upcoming sales. gilt-java has minimal dependencies and is aimed to be easy to use.
 
 Android
 -------
 Android platform to be tested soon!
+
+Download Latest
+---------------
+Download the latest jar [here](https://github.com/nitindhar7/gilt-java/raw/master/dist/gilt-java-1.0.0.jar)
 
 Build & Use
 -----------
@@ -17,7 +20,7 @@ To build:
 Examples:
 
 ``` java
-GiltAPI gilt = new GiltAPI(API_KEY);
+GiltAPI gilt = new GiltAPIClient(API_KEY);
 
 // Get active sales for all Gilt stores
 gilt.getActiveSales();
@@ -35,10 +38,20 @@ gilt.getUpcomingSales(Store.WOMEN);
 gilt.getSaleDetails(sale.getStoreKey(), sale.getSaleKey());
 
 // Get product details for specific product id
-gilt.getProductDetails(productId)
+gilt.getProductDetails(productId);
+
+// Get all available product categories
+gilt.getProductCategories();
 ```
 
 NOTE: gilt-java includes software from [codehaus.org](http://jackson.codehaus.org/) & [testng.org](http://testng.org/).
+
+TODO
+----
+
+- Ensure that all the data available via Gilt API is accessible
+- Return timestamps as java.sql.Timestamp instead of java.lang.String
+- Convert store key to enums
 
 Contribute
 ------------
@@ -60,7 +73,19 @@ Currently there are 2 API endpoints available:
 
 - Products Endpoint
   - `products/{product_id}/detail.json => Product getProductDetails(int productId)`
+  - `products/categories.json => List<String> getProductCategories()`
 
 Copyright
 ---------
-Copyright (c) 2012 Nitin Dhar. See LICENSE for details.
+Copyright (c) 2013 Nitin Dhar. See [MIT-LICENSE](MIT-LICENSE) for details.
+
+Author
+------
+
+My aim is to make Forrst integration into Java applications as easy as possible. I have tried my best to provide in-code documentation for each method.
+
+- Nitin Dhar
+
+  - Forrst: https://forrst.com/people/nitindhar7
+  - Site: http://softwarebynitin.com
+  - Twitter: @nitin_dhar
