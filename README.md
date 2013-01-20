@@ -12,7 +12,7 @@ Download the latest jar [here](https://github.com/nitindhar7/gilt-java/raw/maste
 
 Build & Use
 -----------
-Please check [Gilt API documentation](https://api.gilt.com) for the official API descriptions and to get your private API key (required for use).
+Please check [Gilt API documentation](https://dev.gilt.com) for the official API descriptions and to get your private API key (required for use).
 To build:
 
     $ ant
