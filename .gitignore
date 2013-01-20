@@ -1,4 +1,9 @@
+.classpath
+.project
+.settings/
+.sonar/
+lib/
 bin/
-doc/
-dist/
 target/
+test-output/
+javadocs/

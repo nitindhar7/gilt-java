@@ -1,17 +1,14 @@
 package com.nitindhar.giltjava.model;
 
-import java.io.Serializable;
-
 import javax.validation.constraints.NotNull;
 
 import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 
+@SuppressWarnings("serial")
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class ImageUrl implements Serializable {
-
-    private static final long serialVersionUID = -5112307823112067863L;
+public class ImageUrl extends AbstractData {
 
     @JsonProperty("url")
     @NotNull
@@ -24,7 +21,7 @@ public class ImageUrl implements Serializable {
     @JsonProperty("height")
     @NotNull
     private final int height;
-    
+
     @JsonCreator
     public ImageUrl(@JsonProperty("url") @NotNull String url,
                     @JsonProperty("width") @NotNull int width,
@@ -45,5 +42,5 @@ public class ImageUrl implements Serializable {
     public int getHeight() {
         return height;
     }
-    
+
 }

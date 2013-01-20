@@ -1,6 +1,5 @@
 package com.nitindhar.giltjava.model;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -10,48 +9,47 @@ import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 
+@SuppressWarnings("serial")
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class Sale implements Serializable {
-
-    private static final long serialVersionUID = 5142716569349543687L;
+public class Sale extends AbstractData {
 
     @JsonProperty("name")
     @NotNull
     private final String name;
-    
+
     @JsonProperty("sale")
     @NotNull
     private final String sale;
-    
+
     @JsonProperty("sale_key")
     @NotNull
     private final String saleKey;
-    
+
     @JsonProperty("store")
     @NotNull
     private final String storeKey;
-    
+
     @JsonProperty("description")
     private final String description;
-    
+
     @JsonProperty("sale_url")
     @NotNull
     private final String saleUrl;
-    
+
     @JsonProperty("begins")
     @NotNull
     private final String begins;
-    
+
     @JsonProperty("ends")
     private final String ends;
-    
+
     @JsonProperty("image_urls")
     @NotNull
     private final Map<String,List<ImageUrl>> imageUrls;
-    
+
     @JsonProperty("products")
     private final List<String> products;
-    
+
     @JsonCreator
     public Sale(@JsonProperty("name") @NotNull String name,
                 @JsonProperty("sale") @NotNull String sale,

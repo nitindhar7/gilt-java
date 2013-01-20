@@ -1,6 +1,5 @@
 package com.nitindhar.giltjava.model;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -10,49 +9,48 @@ import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 
+@SuppressWarnings("serial")
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class Product implements Serializable {
-
-    private static final long serialVersionUID = 8847630837824654645L;
+public class Product extends AbstractData {
 
     @JsonProperty("name")
     @NotNull
     private final String name;
-    
+
     @JsonProperty("product")
     @NotNull
     private final String product;
-    
+
     @JsonProperty("id")
     @NotNull
     private final int id;
-    
+
     @JsonProperty("brand")
     @NotNull
     private final String brand;
-    
+
     @JsonProperty("url")
     @NotNull
     private final String url;
-    
+
     @JsonProperty("content")
     private final ProductContent content;
-    
+
     @JsonProperty("description")
     private final String description;
-    
+
     @JsonProperty("fit_notes")
     private final String fitNotes;
-    
+
     @JsonProperty("materials")
     private final String materials;
-    
+
     @JsonProperty("care_instructions")
     private final String careInstructions;
-    
+
     @JsonProperty("origin")
     private final String origin;
-    
+
     @JsonProperty("image_urls")
     @NotNull
     private final Map<String,List<Map<String,Object>>> imageUrls;
@@ -60,7 +58,7 @@ public class Product implements Serializable {
     @JsonProperty("skus")
     @NotNull
     private final List<Sku> skus;
-    
+
     @JsonCreator
     public Product(@JsonProperty("name") @NotNull String name,
                    @JsonProperty("product") @NotNull String product,

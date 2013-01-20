@@ -1,0 +1,66 @@
+[
+    {
+        "name":"City Smart: Slim Trousers, Blazers & Boots",
+        "sale_url":"http://www.gilt.com/sale/men/city-smart-slim-trou",
+        "image_urls":["http://cdn1.gilt.com/images/share/uploads/0000/0001/3427/134273291/orig.jpg"],
+        "begins":"2012-01-21T17:00:00Z",
+        "ends":"2012-01-23T05:00:00Z",
+        "description":"Call it a one-stop shop for the discerning urbanite. This sale has everything you need to look your best on a day out in the city â€” from fitted sport coats and blazers to trim trousers and boots better suited to the sidewalk than the back woods. Grab something great, and take on the town in style. ",
+        "products": [
+            {
+                "name":"Check Blazer",
+                "brand":"Opening Ceremony",
+                "content": {
+                    "description":"Long sleeve wool blend single breasted two button check blazer.  Notch lapel, button cuffs and a center back vent.  Three patch pockets.  Fully lined with three interior pockets.  Model is wearing a size M. Model's measurements: Height: 6'1\", Waist: 30\", Shirt: 15.5, Suit: 40.  Dry clean only.",
+                    "fit_notes":"fits perfectly",
+                    "material":"Body: 70% Wool, 30% Nylon, Lining: 50% Cotton, 50% Cupro",
+                    "care_instructions":"fits perfectly",
+                    "origin":"United States"
+                },
+                "url":"http://www.gilt.com/m/public/look/?s_id=873b9eb67fa14192e7dedb4952a87b26d47086aa19bb736ab512a18bb0751fed_0_125088982&s_sale_url_key=30b8b0fe4c476dbcb1cc18f0e75d81d96e9b974a20bf699fdaed016aa83dd2b4_0_city-smart-slim-trou",
+                "image_urls":[
+                    "http://cdn1.gilt.com/images/share/uploads/0000/0001/3371/133714088/91x121.jpg",
+                    "http://cdn1.gilt.com/images/share/uploads/0000/0001/3371/133714074/91x121.jpg",
+                    "http://cdn1.gilt.com/images/share/uploads/0000/0001/3371/133711263/91x121.jpg",
+                    "http://cdn1.gilt.com/images/share/uploads/0000/0001/3371/133714088/300x400.jpg",
+                    "http://cdn1.gilt.com/images/share/uploads/0000/0001/3371/133714074/300x400.jpg",
+                    "http://cdn1.gilt.com/images/share/uploads/0000/0001/3371/133711263/300x400.jpg",
+                    "http://cdn1.gilt.com/images/share/uploads/0000/0001/3371/133714088/420x560.jpg",
+                    "http://cdn1.gilt.com/images/share/uploads/0000/0001/3371/133714074/420x560.jpg",
+                    "http://cdn1.gilt.com/images/share/uploads/0000/0001/3371/133711263/420x560.jpg"
+                ],
+                "skus":[
+                    {
+                        "msrp_price":"805.00",
+                        "sale_price":"499.00",
+                        "shipping_surcharge":"9.00",
+                        "attributes":[
+                            {
+                                "name":"color",
+                                "value":"navy"
+                            },
+                            {
+                                "name":"size",
+                                "value":"s"
+                            }
+                        ]
+                    },
+                    {
+                        "msrp_price":"805.00",
+                        "sale_price":"499.00",
+                        "attributes":[
+                            {
+                                "name":"color",
+                                "value":"navy"
+                            },
+                            {
+                                "name":"size",
+                                "value":"m"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
